@@ -5,14 +5,14 @@
 body{
     background-color: black;
     text-transform: uppercase;
-    font-family: 'alegreya sc';
+    font-family: 'valera round';
     font-weight: 700; 
 }
 
 .background{
-    background-image: url('../assets/bgone.jpg');
+    background-image: url('../assets/bgOne.jpg');
     background-size:100%;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
 }
 
 header{
@@ -40,14 +40,14 @@ header{
 input[type='text'],
 .options,
 button{
-    background-image: url('../assets/foam.jpg');
+    background-image: url('../assets/foamLight.jpg');
     border-radius: 5px;
 }
 
 input[type='text']{
     border: none;
     width:400px;
-    padding:10px;
+    padding:15px;
     text-align: center;
     font-weight: bolder;
     text-transform: uppercase;
@@ -56,10 +56,11 @@ input[type='text']{
 .options{
     display:flex;
     justify-content: space-between;
-    padding: 20px;
-    width: 80%;
+    padding: 15px;
+    width: 600px;
     label{
-        font-family: sans-serif;
+        display:flex;
+        align-items: center;
     }
     input[type=radio]{
         margin-right:10px;
@@ -72,4 +73,12 @@ button{
     margin-bottom:10%;
     font-weight: bolder;
     text-transform: uppercase;
+}
+
+.asideContainer{
+    background-image: url('../assets/foamLight.jpg');
+    padding:20px;
+    border-radius: 10px;
+    line-height: 25px;
+    margin-bottom:20px;
 }

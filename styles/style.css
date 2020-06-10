@@ -222,42 +222,59 @@ textarea {
 }
 
 h1 {
-  font-family: 'alegreya sc';
+  font-family: 'anton';
   font-weight: 900;
   font-size: 6rem;
-  background: url("../assets/foam.jpg") no-repeat;
+  background: url("../assets/foamDark.png") no-repeat;
   color: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-filter: sepia(70%);
-          filter: sepia(70%);
-  padding: 10% 0 0 10%;
-  margin-bottom: 8%;
+  padding: 10% 0;
+  margin-bottom: 5%;
+  -webkit-filter: contrast(100%);
+          filter: contrast(100%);
 }
 
 h2 {
-  font-family: 'alegreya sc';
+  font-family: 'anton';
   font-weight: 700;
-  font-size: 3rem;
-  background: url("../assets/foam.jpg") no-repeat;
+  font-size: 3.5rem;
+  background: url("../assets/foamDark.png") no-repeat;
   color: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-filter: sepia(70%);
-          filter: sepia(70%);
+  margin-bottom: 5px;
+  -webkit-filter: contrast(100%);
+          filter: contrast(100%);
+}
+
+h1,
+h2 {
+  -webkit-filter: drop-shadow(0 0 1rem black);
+          filter: drop-shadow(0 0 1rem black);
+  font-weight: 900;
+}
+
+p {
+  color: #000;
+}
+
+input[type=text],
+label {
+  font-family: 'varela round';
+  font-size: 1.5rem;
 }
 
 body {
   background-color: black;
   text-transform: uppercase;
-  font-family: 'alegreya sc';
+  font-family: 'valera round';
   font-weight: 700;
 }
 
 .background {
-  background-image: url("../assets/bgone.jpg");
+  background-image: url("../assets/bgOne.jpg");
   background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 header {
@@ -300,14 +317,14 @@ header {
 input[type='text'],
 .options,
 button {
-  background-image: url("../assets/foam.jpg");
+  background-image: url("../assets/foamLight.jpg");
   border-radius: 5px;
 }
 
 input[type='text'] {
   border: none;
   width: 400px;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   font-weight: bolder;
   text-transform: uppercase;
@@ -320,12 +337,17 @@ input[type='text'] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px;
-  width: 80%;
+  padding: 15px;
+  width: 600px;
 }
 
 .options label {
-  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .options input[type=radio] {
@@ -338,4 +360,12 @@ button {
   margin-bottom: 10%;
   font-weight: bolder;
   text-transform: uppercase;
+}
+
+.asideContainer {
+  background-image: url("../assets/foamLight.jpg");
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 25px;
+  margin-bottom: 20px;
 }

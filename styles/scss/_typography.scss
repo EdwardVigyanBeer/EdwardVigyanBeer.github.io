@@ -1,24 +1,41 @@
 h1{
-    font-family: 'alegreya sc';
+    font-family: 'anton';
     font-weight: 900;
     font-size: 6rem;
-    background: url('../assets/foam.jpg') no-repeat;
+    background: url('../assets/foamDark.png') no-repeat;
     color: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: sepia(70%);
-    padding: 10% 0 0 10%;
-    margin-bottom: 8%;
+    padding: 10% 0;
+    margin-bottom: 5%;
+    filter: contrast(100%)
 }
 
 
 h2{
-    font-family: 'alegreya sc';
+    font-family: 'anton';
     font-weight: 700;
-    font-size: 3rem;
-    background: url('../assets/foam.jpg') no-repeat;
+    font-size: 3.5rem;
+    background: url('../assets/foamDark.png') no-repeat;
     color: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: sepia(70%)
+    margin-bottom:5px;
+    filter: contrast(100%);
+}
+
+h1,
+h2{
+    filter: drop-shadow(0 0 1rem black);
+    font-weight: 900;
+}
+
+p{
+    color:#000;
+}
+
+input[type=text],
+label{
+    font-family: 'varela round';
+    font-size:1.5rem;
 }
