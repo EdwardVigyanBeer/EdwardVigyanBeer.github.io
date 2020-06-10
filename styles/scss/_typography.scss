@@ -1,1 +1,24 @@
+h1{
+    font-family: 'alegreya sc';
+    font-weight: 900;
+    font-size: 6rem;
+    background: url('../assets/foam.jpg') no-repeat;
+    color: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: sepia(70%);
+    padding: 10% 0 0 10%;
+    margin-bottom: 8%;
+}
 
+
+h2{
+    font-family: 'alegreya sc';
+    font-weight: 700;
+    font-size: 3rem;
+    background: url('../assets/foam.jpg') no-repeat;
+    color: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: sepia(70%)
+}

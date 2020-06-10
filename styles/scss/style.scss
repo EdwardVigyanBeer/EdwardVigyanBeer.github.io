@@ -1,0 +1,75 @@
+@import'setup';
+@import'typography';
+@import'mixins';
+
+body{
+    background-color: black;
+    text-transform: uppercase;
+    font-family: 'alegreya sc';
+    font-weight: 700; 
+}
+
+.background{
+    background-image: url('../assets/bgone.jpg');
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+
+header{
+    text-align: center;
+}
+
+.wrapper{
+    max-width: 1350px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mainContainer{
+    display:flex;
+    flex-direction: column;
+    &>div{
+        margin-bottom:6%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+input[type='text'],
+.options,
+button{
+    background-image: url('../assets/foam.jpg');
+    border-radius: 5px;
+}
+
+input[type='text']{
+    border: none;
+    width:400px;
+    padding:10px;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.options{
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 80%;
+    label{
+        font-family: sans-serif;
+    }
+    input[type=radio]{
+        margin-right:10px;
+    }
+}
+
+button{
+    border:none;
+    padding: 15px;
+    margin-bottom:10%;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
