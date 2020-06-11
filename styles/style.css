@@ -277,8 +277,13 @@ body {
   background-size: 100%;
 }
 
-header {
-  text-align: center;
+.headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .wrapper {

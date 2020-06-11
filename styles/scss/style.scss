@@ -15,8 +15,9 @@ body{
     // background-repeat: no-repeat;
 }
 
-header{
-    text-align: center;
+.headerContainer{
+    display:flex;
+    justify-content: center;
 }
 
 .wrapper{
