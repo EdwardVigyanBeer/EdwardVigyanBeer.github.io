@@ -17,28 +17,28 @@
         <div class="mainContainer wrapper">
             <div>
                 <h2>What are you Eating?</h2>
-                <form action="submit" class="foodOption" >
+                <form action='submit' id='textInput'>
                     <label for="food"></label>
-                    <input type="text" placeholder="Fries, Burgers">
+                    <input type="text" placeholder="Burgers" minlength='4'>
                 </form>
             </div>
-            <div>
-                <h2>What ingredient do you prefer?</h2>
-                <form action="" class="options">
-                    <label for="ingredient"><input type="radio">Hops</label>
-                    <label for="ingredient"><input type="radio">Barley</label>
-                    <label for="ingredient"><input type="radio">Malt</label>            
+            <!-- <div>
+                <h2>View Ingredients?</h2>
+                <form action="submit" class="options">
+                    <label for="ingredient"><input type="radio" name='ingredient'>Hops</label>
+                    <label for="ingredient"><input type="radio" name='ingredient'>Malt</label>            
                 </form>
-            </div>
+            </div> -->
             <div>
                 <h2>Recommend me a beer!</h2>
-                <button>Click!</button>
+                <form action="submit">
+                    <button id='foodOption'>Click!</button>
+                </form>
             </div>
         </div>
     </main>
     <aside>
         <div class="asideContainer wrapper">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tenetur quam fugit sunt sed eum odit iste voluptas quaerat quos. Dolorem, dolorum. Consequatur, est. Totam nisi et illo. Quisquam assumenda molestiae aspernatur quibusdam incidunt saepe eum deserunt, laudantium deleniti fugiat explicabo quas recusandae iure commodi, animi debitis delectus vero mollitia.</p>
         </div>
     </aside>
     </div>

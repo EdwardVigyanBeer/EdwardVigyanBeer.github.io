@@ -1,39 +1,42 @@
 const app = {};
-app.apiUrl = 'https://api.punkapi.com/v2/beers';
-app.apiUrl2  = `https://api.punkapi.com/v2/beers?page=1&per_page=80`
+app.apiUrl = 'https://api.punkapi.com/v2/beers/?';
 
-app.getBeers = function(){
+
+app.getBeers = function(food){
     $.ajax({
-        url: app.apiUrl2,
+        url: app.apiUrl,
         method:'GET',
         datatype:'json',
+        data:{
+            key: app.apiUrl, 
+            format: 'json',
+            food:app.foodName
+        }
     })
     .then(function(response){
         app.displayBeers(response)
     })
 }
 
+// app.foodSubmit = $('#foodOption').on('submit', function(){
+//     event.preventDefault();
+//     app.foodName = $('input').val();
+//     console.log(app.foodName);
+// });
+
 app.displayBeers = function(Array){
     Array.forEach(function(beerSelection){
-        // if(
-        //     beerSelection.food_pairing[0].includes('cake') || 
-        //     beerSelection.food_pairing[1].includes('cake') || 
-        //     beerSelection.food_pairing[2].includes('cake')
-        //     )
-            {
-                const beerName = $('<h2>').text(beerSelection.name);
-                const beerDescription = $('<p>').text(beerSelection.description);
-                const beerFood = $('<p>').text(beerSelection.food_pairing);
-                const beerImage = $('<p>').text(beerSelection.image_url);
-                console.log(beerSelection.name);
-                console.log(beerSelection.id);
-                // console.log(beerSelection.image_url);
-                // console.log(beerDescription);
-                // console.log(beerFood);
-                // console.log(beerImage);
-                const beerFrame = $('<div>').append(beerName, beerDescription, beerFood, beerImage);
-                $(`.aside`).append(beerFrame);
-        }
+            if(beerSelection.image_url){
+                const beerName = $('<h2>').addClass('beerName').text(beerSelection.name);
+                const beerDescription = $('<p>').addClass('beerDescription').text(beerSelection.description);
+                const pairing = $('<p>Food Pairings:<p>').addClass('pairingTitle')
+                const beerFood = $('<p>').addClass('beerFood').text(beerSelection.food_pairing);
+                const beerImage = $('<img>').addClass('beerImage').attr('src',beerSelection.image_url);
+                const beerFrame = $('<div>').addClass('beerFrame').append(beerName,beerDescription, pairing, beerFood);
+                const beerFrame2 = $('<div>').addClass('beerFrame2').append(beerImage)
+                const beerContainer = $('<div>').addClass('beerContainer').append(beerFrame,beerFrame2)
+                $(`.asideContainer`).append(beerContainer);
+            }       
     });
 };
 
@@ -49,14 +52,19 @@ app.displayBeers = function(Array){
 //     })
 // })
 
-app.foodSubmit = $('.foodOption').on('submit', function(){
-    event.preventDefault();
-    app.foodName = $('input').val();
-    console.log(app.foodName);
-});
-
 app.init = function(){
-    app.getBeers();
+    $('#textInput').on('submit',function(){
+        event.preventDefault();
+        alert(`Click the button to get some beers!`)
+    })
+    app.foodSubmit = $('#foodOption').on('click', function(){
+        event.preventDefault();
+        $('.asideContainer').empty();
+        app.foodName = $('input').val();
+        app.getBeers();
+        $(`input`).val('');
+    });
+    
 };
 
 $(document).ready(function(){
