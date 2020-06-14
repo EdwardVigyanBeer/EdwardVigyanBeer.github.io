@@ -250,8 +250,8 @@ h2 {
 
 h1,
 h2 {
-  -webkit-filter: drop-shadow(0 0 1rem black);
-          filter: drop-shadow(0 0 1rem black);
+  -webkit-filter: drop-shadow(0 0 0.2rem black);
+          filter: drop-shadow(0 0 0.2rem black);
   font-weight: 900;
 }
 
@@ -272,11 +272,14 @@ label {
   font-size: 1.5rem;
 }
 
+button {
+  font-family: 'varela round';
+}
+
 body {
   background-color: black;
   text-transform: uppercase;
   font-family: 'valera round';
-  font-weight: 700;
 }
 
 .background {
@@ -331,6 +334,7 @@ input[type='text'],
 button {
   background-image: url("../assets/foamLight.jpg");
   border-radius: 5px;
+  background-size: 100%;
 }
 
 input[type='text'] {
@@ -340,8 +344,8 @@ input[type='text'] {
   text-align: center;
   font-weight: bolder;
   text-transform: uppercase;
-  -webkit-transition: 400ms ease-in;
-  transition: 400ms ease-in;
+  -webkit-transition: 200ms ease-in;
+  transition: 200ms ease-in;
 }
 
 input[type='text']:hover,
@@ -382,8 +386,8 @@ button {
   text-transform: uppercase;
   border: 10px solid transparent;
   width: 400px;
-  -webkit-transition: 400ms ease-in;
-  transition: 400ms ease-in;
+  -webkit-transition: 200ms ease-in;
+  transition: 200ms ease-in;
 }
 
 .asideContainer {
@@ -397,6 +401,8 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-size: 100%;
+  display: none;
 }
 
 .beerContainer {
@@ -408,6 +414,7 @@ button {
           justify-content: space-between;
   min-width: 50%;
   margin: 20px 0;
+  width: 100%;
 }
 
 .beerFrame,
@@ -436,6 +443,9 @@ button {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .beerFrame2 img {
@@ -458,4 +468,67 @@ button {
 .beerImage {
   width: 100px;
   height: 300px;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 570px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 2.7rem;
+  }
+  .beerFrame {
+    min-width: 65%;
+    margin-right: 5%;
+  }
+  .beerFrame2 {
+    min-width: 30%;
+  }
+}
+
+@media (max-width: 456px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .beerDescription,
+  .beerFood {
+    font-size: .8rem;
+  }
+  input[type='text'],
+  button {
+    border: 10px solid transparent;
+    width: 300px;
+    padding: 0px;
+    background-size: 100%;
+  }
+  .beerContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .beerFrame {
+    margin-right: 0%;
+  }
+  .beerFrame2 {
+    margin-top: 50px;
+  }
+  .beerName {
+    text-align: center;
+  }
 }
