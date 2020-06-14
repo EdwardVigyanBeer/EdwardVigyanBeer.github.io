@@ -40,6 +40,10 @@ app.displayBeers = function(Array){
     });
 };
 
+        $("#foodOption").on("click", function () {
+            $(".asideContainer").toggle();
+        });
+
 // Other .then Method
 // .then(function (res) {
 //     res.forEach(function (beerSelection, index) {
