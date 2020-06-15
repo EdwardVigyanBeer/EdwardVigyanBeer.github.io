@@ -6,13 +6,11 @@ body{
     background-color: black;
     text-transform: uppercase;
     font-family: 'valera round';
-    // font-weight: 700; 
 }
 
 .background{
-    background-image: url('../assets/bgOne.jpg');
+    background-image: url('../assets/bgone.jpg');
     background-size:100%;
-    // background-repeat: no-repeat;
 }
 
 .headerContainer{
@@ -58,8 +56,8 @@ input[type='text']{
 
 input[type='text']:hover,
 input[type='text']:focus,
-#foodOption:hover,
-#foodOption:focus{
+.foodOption:hover,
+.foodOption:focus{
     border:goldenrod 10px solid;
 }
 
@@ -117,7 +115,6 @@ button{
 }
 
 .beerFrame{
-    // min-width: 450px;
     border-bottom:10px solid goldenrod;
     background-color: rgba(255, 255, 255, 0.7);
     padding:10px;
@@ -127,7 +124,6 @@ button{
 .beerFrame2{
     align-items: flex-end;
     align-items: center;
-    // min-width: 450px;
     img{
         max-width:300px;
         margin-bottom:10px;

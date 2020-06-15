@@ -283,7 +283,7 @@ body {
 }
 
 .background {
-  background-image: url("../assets/bgOne.jpg");
+  background-image: url("../assets/bgone.jpg");
   background-size: 100%;
 }
 
@@ -350,8 +350,8 @@ input[type='text'] {
 
 input[type='text']:hover,
 input[type='text']:focus,
-#foodOption:hover,
-#foodOption:focus {
+.foodOption:hover,
+.foodOption:focus {
   border: goldenrod 10px solid;
 }
 
