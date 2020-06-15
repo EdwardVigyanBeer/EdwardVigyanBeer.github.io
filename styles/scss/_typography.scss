@@ -2,7 +2,6 @@ h1{
     font-family: 'anton';
     font-weight: 900;
     font-size: 6rem;
-    // font-size: clamp(4rem, 3vw, 9rem);
     background: url('../assets/foamDark.png') no-repeat;
     color: black;
     -webkit-background-clip: text;
@@ -11,7 +10,6 @@ h1{
     margin-bottom: 5%;
     filter: contrast(100%);
 }
-
 
 h2{
     font-family: 'anton';
